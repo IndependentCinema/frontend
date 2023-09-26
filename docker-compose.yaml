@@ -1,0 +1,21 @@
+# ---
+# Docker image tag
+# dcr.svc.obaa.cloud/cinerama-frontend:v0.1
+# ---
+# Docker image build command
+# docker build -f Dockerfile -t dcr.svc.obaa.cloud/cinerama-frontend:v0.2 .
+# ---
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dcr.svc.obaa.cloud/cinerama-frontend:v0.1
+    container_name: cinerama-frontend
+    volumes:
+      - ./:/app/
+      - ./node_modules:/app/node_modules/
+    ports:
+      - 3000:80
