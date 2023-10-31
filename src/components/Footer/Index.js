@@ -35,14 +35,14 @@ export default function Index() {
             >
                 <Link href='/'>
                     <Text fontSize={"2xl"} fontWeight={"bold"} fontStyle={"italic"}>
-                        CINERAMA
+                        INDEPENDENT CINEMA APP
                     </Text>
                 </Link>
             </Flex>
             <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-                {/* All rights reserved, 2023 © Centenniel college COMP 246, Group 8
+                {/* All rights reserved, 2023 © Centennial College
                 © 2022 Chakra Templates. All rights reserved */}
-                © 2023 Centenniel college COMP 246, Group 8. All rights reserved
+                © 2023 Centennial College. All rights reserved
             </Text>
         </Box>
     )

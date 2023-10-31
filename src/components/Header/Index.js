@@ -114,7 +114,7 @@ function Header(props) {
 
             <Link to='/'>
                 <Text fontSize={"2xl"} fontWeight={"bold"} fontStyle={"italic"}>
-                    CINERAMA
+                    INDEPENDENT CINEMA PAGE
                 </Text>
             </Link>
 
