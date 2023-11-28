@@ -14,7 +14,37 @@ export async function AttemptUpdateBooking({ payload, bookingId }) {
     if (responseObject.status === 'success') {
         let responseData = responseObject.data
         console.log("responseData: ", responseData)
-        window.location.reload()
+
+        // Extract relevant information from the response
+        const { _id, movie, date, seats } = responseData;
+        const lastSeat = seats[seats.length - 1];
+
+        // Create invoice content
+        const invoiceContent = `
+          Booking-id: ${_id}\n
+          Movie: (${movie})\n
+          Date and Time: ${formatBookingDateTime(date)}\n
+          Booked Seat: Row ${lastSeat.row}, Column ${lastSeat.column}\n
+        `;
+        const newWindow = window.open('', '_blank');
+        // Add download button to the new window
+        newWindow.document.write(`
+          <h2>Invoice</h2>
+          <pre>${invoiceContent}</pre>
+          <button onclick="downloadInvoice()">Download Invoice</button>
+          <script>
+            function downloadInvoice() {
+              const invoiceBlob = new Blob([${JSON.stringify(invoiceContent)}], { type: 'text/plain' });
+              const link = document.createElement('a');
+              link.href = URL.createObjectURL(invoiceBlob);
+              link.download = 'invoice.txt';
+              link.click();
+            }
+          </script>
+        `);
+  
+        // Reload the current window
+        window.location.reload();
     } else {
         // Set New State
         console.log("Error: ", Error)
@@ -35,7 +65,37 @@ export async function AttemptBookTicket(payload) {
     if (responseObject.status === 'success') {
         let responseData = responseObject.data
         console.log("responseData: ", responseData)
-        window.location.reload()
+
+        // Extract relevant information from the response
+        const { _id, movie, date, seats } = responseData;
+        const lastSeat = seats[seats.length - 1];
+
+        // Create invoice content
+        const invoiceContent = `
+          Booking-id: ${_id}\n
+          Movie: (${movie})\n
+          Date: ${new Date(date).toLocaleDateString()}
+          \nLast Seat: Row ${lastSeat.row}, Column ${lastSeat.column}\n
+        `;
+        const newWindow = window.open('', '_blank');
+        // Add download button to the new window
+        newWindow.document.write(`
+          <h2>Invoice</h2>
+          <pre>${invoiceContent}</pre>
+          <button onclick="downloadInvoice()">Download Invoice</button>
+          <script>
+            function downloadInvoice() {
+              const invoiceBlob = new Blob([${JSON.stringify(invoiceContent)}], { type: 'text/plain' });
+              const link = document.createElement('a');
+              link.href = URL.createObjectURL(invoiceBlob);
+              link.download = 'invoice.txt';
+              link.click();
+            }
+          </script>
+        `);
+  
+        // Reload the current window
+        window.location.reload();
     } else {
         // Set New State
         console.log("Error: ", Error)
@@ -43,6 +103,14 @@ export async function AttemptBookTicket(payload) {
         return null
     }
 }
+
+function formatBookingDateTime(dateString) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: true, timeZone: 'UTC' };
+    const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
+    const formattedTime = '6:00 PM'; // Add your desired time format here
+    return `${formattedDate} at ${formattedTime}`;
+  }
+  
 
 
 export async function AttemptLogin({ payload, reduxLogin }) {

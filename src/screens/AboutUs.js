@@ -25,14 +25,14 @@ export default function AboutUs() {
                     </Heading>
 
                     <Text as={"p"} fontSize="lg">
-                        We are a passionate group of students who came together in July 2023 with the aim of creating a space dedicated to movie enthusiasts. At CINERAMA, we love to experience the big screen and share our movie journeys with the world.
+                        We are a passionate group of students who came together in 2023 with the aim of creating a space dedicated to independent cinema entrepeneurs. We love to experience the big screen and share our movie journeys with the world.
 
                         Our mission is to provide our users with a platform where they can find detailed information about the latest movies, conveniently purchase cinema tickets, and explore honest and objective reviews.
 
-                        At CINERAMA, we strive to stay up-to-date with the most exciting movie releases and special events in the film industry. Our team of dedicated film critics works hard to provide unbiased and detailed reviews of movies hitting the big screen.
+                        We strive to stay up-to-date with the most exciting movie releases and special events in the film industry. Our team of dedicated film critics works hard to provide unbiased and detailed reviews of movies hitting the big screen.
                         We understand the importance of the movie community, and we encourage our users to participate and share their own reviews and recommendations. We believe that cinema is a collective experience, and we aim to foster discussions and the exchange of ideas among fellow movie lovers.
 
-                        Thank you for visiting CINERAMA and joining our film community! We hope you find all the information you need and enjoy your cinema experiences with us.
+                        Thank you for visiting our website and joining our film community! We hope you find all the information you need and enjoy your cinema experiences with us.
                         Please feel free to reach out to us if you have any questions or concerns.
                     </Text>
 
@@ -40,7 +40,7 @@ export default function AboutUs() {
                         Our Team
                     </Heading>
                     <Text as={"p"}fontSize="lg" align={"center"}>
-                        At Cinerama, our success is attributed to the dedicated and passionate individuals who make up our team. We are a diverse group of six movie enthusiasts, brought together by a common love for cinema and a desire to create a remarkable movie-watching experience for you.
+                        Our success is attributed to the dedicated and passionate individuals who make up our team. We are a diverse group of six movie enthusiasts, brought together by a common love for cinema and a desire to create a remarkable movie-watching experience for you.
                     </Text>
                     
                     {/* <Heading as={"h2"} textAlign={"center"}>
@@ -51,29 +51,16 @@ export default function AboutUs() {
                         Development Team
                     </Text>
                     <ul>
-                        <li>Bolutife</li>
                         <li>Nicolas</li>
-                        <li>Maria Veronica</li>
-                        <li>Razel</li>
+                        <li>Prabh</li>
+                        <li>Adrian</li>
+                        <li>Navdeep</li>
+                        <li>Lalit</li>
+                        <li>Amanpreet</li>
                     </ul>
-
-                    <Text fontWeight={"bold"} as={"h3"} textAlign={"left"}>
-                        Design Team
-                    </Text>
-                    <ul>
-                        <li>Gideon</li>
-                    </ul>
-
-                    <Text fontWeight={"bold"} as={"h3"} textAlign={"left"}>
-                        Communication Team
-                    </Text>
-                    <ul>
-                        <li>Francisco</li>
-                    </ul>
-                    <br />
 
                     <Text>
-                        Together, we form a dynamic team, united by a shared passion for cinema and a commitment to providing you with an unforgettable movie experience. We are grateful for your support and look forward to enhancing your cinematic journey with Cinerama.
+                        Together, we form a dynamic team, united by a shared passion for cinema and a commitment to providing you with an unforgettable movie experience. We are grateful for your support and look forward to enhancing your cinematic journey with our website.
                     </Text>
                     <Text fontWeight={"bold"} align={"center"} mt={10}>
                         Lights, camera, and let's make movie magic together!
