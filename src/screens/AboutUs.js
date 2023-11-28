@@ -21,7 +21,7 @@ export default function AboutUs() {
             <Container minW={"6xl"} mt={"20"}>
                 <Box minH={"800px"}>
                     <Heading as={"h2"} textAlign={"center"}>
-                        What is Cinerama?
+                        What is Independent Cinema App?
                     </Heading>
 
                     <Text as={"p"} fontSize="lg">
